@@ -24,10 +24,9 @@ contract MyLootBox is ILootBox, Ownable, Pausable, ReentrancyGuard, MyFactory {
     Rare,
     Epic,
     Legendary,
-    Divine,
-    Hidden
+    special edition
   }
-  uint256 constant NUM_CLASSES = 6;
+  uint256 constant NUM_CLASSES = 5;
 
   // NOTE: Price of the lootbox is set via sell orders on OpenSea
   struct OptionSettings {
@@ -51,8 +50,8 @@ contract MyLootBox is ILootBox, Ownable, Pausable, ReentrancyGuard, MyFactory {
    * @dev Example constructor. Calls setOptionSettings for you with
    *      sample settings
    * @param _proxyRegistryAddress The address of the OpenSea/Wyvern proxy registry
-   *                              On Rinkeby: "0xf57b2c51ded3a29e6891aba85459d600256cf317"
-   *                              On mainnet: "0xa5409ec958c83c3f309868babaca7c86dcb077c1"
+   *                              On Rinkeby: "0xc2826af2b07156c22c67fb6d7a18924a1ff57b2f"
+   *                              On mainnet: "0xc2826af2b07156c22c67fb6d7a18924a1ff57b2f"
    * @param _nftAddress The address of the non-fungible/semi-fungible item contract
    *                    that you want to mint/transfer with each open
    */
